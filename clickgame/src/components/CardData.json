@@ -1,0 +1,26 @@
+[{
+        "imageSrc": "http://via.placeholder.com/170x170",
+        "name": "Tank",
+        "id": 1
+    },
+    {
+        "imageSrc": "http://via.placeholder.com/170x170",
+        "name": "dude",
+        "id": 2
+    },
+    {
+        "imageSrc": "http://via.placeholder.com/170x170",
+        "name": "dudette",
+        "id": 3
+    },
+    {
+        "imageSrc": "http://via.placeholder.com/170x170",
+        "name": "homer",
+        "id": 4
+    },
+    {
+        "imageSrc": "http://via.placeholder.com/170x170",
+        "name": "marge",
+        "id": 5
+    }
+]
