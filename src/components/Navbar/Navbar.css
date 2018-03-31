@@ -3,7 +3,7 @@
 	z-index: 2;
 	width: 100%;
 	border-radius: 2px;
-	position: fixed;
+	position: static;
 
 }
 
@@ -12,13 +12,14 @@
 	font-size: 25px;
 	list-style-type: none;
 	float: left;
-	width: 33.33%;
+	width: auto;
 	text-align: center;
 	font-family: Alphabet Soup Tilt;
 }
 
-.score{
+.score {
 	text-align: right;
+	float: right;
 }
 
 .center {

@@ -22,18 +22,21 @@ class App extends React.Component {
       array[j] = temp;
     }
     return array;
-  };
+  }
 
-  handleOnChange = (id) => {
+  handleOnChange = id => {
       this.validateGuess(id)
       this.shuffleArray(this.state.CardData)
   }
 
-  validateGuess = (id) => {
-    if (this.state.guesses.includes(id)) {
-      this.setState({ guesses: this.state.guesses.push(id) });
-      this.setState({ score: this.score + 1 });
+  validateGuess = id => {
+    if (!this.state.guesses.includes(id)) {
+      this.state.guesses.push(id)
+      this.setState({ score: this.state.score + 1 });
     } else {
+          if (this.state.score + 1 > this.state.highScore) {
+            this.setState({ highScore: this.state.score });
+          }
       this.resetGame();
     }
   }
@@ -44,24 +47,15 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-      <Navbar score={this.state.score} highScore={this.state.highScore} />
-      <Wrapper>
-        {this.state.CardData.map(CardData => (
-            <span key={CardData.id}>
-                <Card
-                handleOnchange={this.handleOnChange}
-                id={CardData.id}
-                name={CardData.name}
-                image={CardData.imageSrc}
-                />
-            </span>
-        ))}
-      </Wrapper>
-      <Footer/>
-      </div>
-    );
+    return <div>
+        <Navbar score={this.state.score} highScore={this.state.highScore} />
+        <Wrapper>
+          {this.state.CardData.map(CardData => <span key={CardData.id}>
+              <Card handleOnchange={this.handleOnChange} id={CardData.id} image={CardData.image} name={CardData.name} />
+            </span>)}
+        </Wrapper>
+        <Footer />
+      </div>;
   }
 }
 
