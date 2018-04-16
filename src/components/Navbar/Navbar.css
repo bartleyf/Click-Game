@@ -1,18 +1,24 @@
 .navbar {
-	background-color: #4a7190;
+	background-color: #053358;
 	z-index: 2;
 	width: 100%;
 	border-radius: 2px;
 	position: static;
+}
 
+ul {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 .title {
-	color:whitesmoke;
+	color:rgb(223, 168, 68);
 	font-size: 25px;
-	list-style-type: none;
 	float: left;
-	width: auto;
+	width: 250px;
 	text-align: center;
 	font-family: Alphabet Soup Tilt;
 }
@@ -24,5 +30,5 @@
 
 .center {
 	display: block;
-	width: 200px;
+	width: auto;
 }

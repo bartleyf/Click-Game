@@ -6,7 +6,6 @@
     position: relative;
     width: 125px;
     cursor: pointer;
-    padding: 10px;
 }
 
 button {
@@ -27,4 +26,5 @@ button:hover {
 
 .card > .img-container >  img {
     width: 100%;
+    height: 100%;
 }

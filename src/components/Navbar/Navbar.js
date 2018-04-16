@@ -7,8 +7,13 @@ const Navbar = props => (
       <ul>
         <li className="title click">Memory Game</li>
 
+        <li className="title center">
+          <p>Start clicking on the images, but don't do it twice!</p>
+        </li>
+
         <li className="title score">
-          Current Score: {props.score} | Top Score: {props.highScore}
+          <p>Current Score: {props.score}</p>
+          <p>Top Score: {props.highScore}</p>
         </li>
       </ul>
     </nav>
